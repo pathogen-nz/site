@@ -1,46 +1,48 @@
-import React, { PropTypes } from "react"
-import { Link } from "phenomic"
-import Svg from "react-svg-inline"
+import React, { Component, PropTypes } from "react"
+import Link from "react-router/lib/Link"
+import TitleStripe from "../TitleStripe"
 
-import twitterSvg from "../icons/iconmonstr-twitter-1.svg"
-import gitHubSvg from "../icons/iconmonstr-github-1.svg"
-
-const Header = (props, { metadata: { pkg } }) => (
-  <header>
-    <nav>
-      <div>
-        <Link
-          to={ "/" }
-        >
-          { "Home" }
-        </Link>
-      </div>
-      <div>
-        {
-          pkg.twitter &&
-          <a
-            href={ `https://twitter.com/${pkg.twitter}` }
-          >
-            <Svg svg={ twitterSvg } cleanup />
-            { "Twitter" }
-          </a>
-        }
-        {
-          pkg.repository &&
-          <a
-            href={ pkg.repository }
-          >
-            <Svg svg={ gitHubSvg } cleanup />
-            { "GitHub" }
-          </a>
-        }
-      </div>
-    </nav>
-  </header>
-)
-
-Header.contextTypes = {
-  metadata: PropTypes.object.isRequired,
+export default class Header extends Component {
+  render() {
+    if (this.props.style === "blog") {
+      return (
+        <header className="page-header fade-oc">
+          <div id="top-logo">
+            <Link href="/" title="To the homepage">
+              <img src="/assets/img/logo/logo-black.svg" alt="The freesewing logo" />
+            </Link>
+          </div> 
+        </header>
+      )
+    }
+    else if (this.props.style === "spread") {
+      return (
+        <header className="page-header fade-oc">
+          <div id="home-logo">
+            <div id="home-logo-background" className="bg-thematic"></div>
+            <Link href="/" title="To the homepage">
+              <img src="/assets/img/logo/logo-cutout.svg" alt="The freesewing logo" />
+            </Link>
+          </div> 
+          <TitleStripe title={ this.props.title } />
+        </header>
+      )
+    }
+    return (
+      <header className="page-header fade-oc">
+        <div id="top-logo">
+          <Link href="/" title="To the homepage">
+            <img src="/assets/img/logo/logo-black.svg" alt="The freesewing logo" />
+          </Link>
+        </div> 
+        <TitleStripe narrow title={ this.props.title } />
+      </header>
+    )
+  }
 }
 
-export default Header
+Header.propTypes = {
+  title : PropTypes.string.isRequired,
+  style : PropTypes.string.isRequired,
+}
+

@@ -1,0 +1,2 @@
+#!/bin/bash
+cat jquery-3.2.0.min.js fs.js > fs-bundle.js

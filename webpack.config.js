@@ -8,6 +8,15 @@ import PhenomicLoaderFeedWebpackPlugin
 import PhenomicLoaderSitemapWebpackPlugin
   from "phenomic/lib/loader-sitemap-webpack-plugin"
 
+import phenomicLoaderPresetDefault 
+  from "phenomic/lib/loader-preset-default"
+import phenomicLoaderPluginsMarkdownInitHead 
+  from "phenomic/lib/loader-plugin-markdown-init-head.description-property-from-content"
+import phenomicLoaderPluginsInitRawBodyPropertyFromContent 
+  from "phenomic/lib/loader-plugin-init-rawBody-property-from-content"
+import freesewingMarkdownPipeline 
+  from "./src/plugins/freesewing-markdown-pipeline/index.js"
+
 import pkg from "./package.json"
 
 export default (config = {}) => {
@@ -31,6 +40,12 @@ export default (config = {}) => {
             //   ...require("phenomic/lib/loader-preset-markdown").default
             // ]
             // see https://phenomic.io/docs/usage/plugins/
+               plugins: [ 
+                 ...phenomicLoaderPresetDefault,
+                 phenomicLoaderPluginsMarkdownInitHead,
+                 phenomicLoaderPluginsInitRawBodyPropertyFromContent,
+                 freesewingMarkdownPipeline,
+               ],
           },
         },
 
@@ -75,6 +90,10 @@ export default (config = {}) => {
         {
           test: /\.svg$/,
           loader: "raw-loader",
+        },
+        {
+          test: /\.yml$/,
+          loader: "json-loader!yaml-loader",
         },
       ],
     },
