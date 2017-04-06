@@ -1,2 +1,8 @@
-//  Picture of the week
+/****************************
+ *  Picture of the week
+ ***************************/
 $potw: url("/assets/img/potw/potw.jpg");
+$potwtext: #fff;
+$potwlink: #fff;
+$potwinverse: #000;
+$potwtextshadow: 1px 1px 1px $potwinverse, -1px -1px 1px $potwinverse, -1px 1px 1px $potwinverse, 1px -1px 1px $potwinverse;

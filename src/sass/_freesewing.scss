@@ -13,14 +13,9 @@
 // Bootstrap framework css
 @import "bootstrap";
 
-// Rouge syntax highlighting
-@import "rouge";
-
-// Font Awesome
-//@import "font-awesome";
-
 // Our own css
 @import "freesewing/blockquotes";
+@import "freesewing/blog";
 @import "freesewing/burgers";
 @import "freesewing/cards";
 @import "freesewing/code";
