@@ -45,11 +45,6 @@ export default class Head extends Component {
             { rel: "apple-touch-icon", sizes: "152x152", href: `${ site.theme_settings.apple_icon_152 }` },
             { rel: "apple-touch-icon", sizes: "180x180", href: `${ site.theme_settings.apple_icon_180 }` },
             { rel: "icon", sizes: "192x192", href: `${ site.theme_settings.android_icon }` },
-            { rel: "stylesheet", href: "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" },
-          ] }
-
-          script={ [
-            { src: "/assets/js/fs-bundle.js", type: "text/javascript" },
           ] }
 
           htmlAttributes={ htmlClass }

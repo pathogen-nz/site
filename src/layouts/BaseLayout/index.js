@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from "react"
 import Helmet from "react-helmet"
-import invariant from "invariant"
 import { BodyContainer, joinUri } from "phenomic"
 
 class BaseLayout extends Component {
@@ -9,7 +8,6 @@ class BaseLayout extends Component {
     const { pkg } = context.metadata
 
     const {
-            __filename,
             __url,
             head,
             body,
@@ -17,11 +15,6 @@ class BaseLayout extends Component {
             footer,
         } = props
     
-    invariant(
-            typeof head.title === "string",
-            `Your page '${ __filename }' needs a title`
-        )
-
     const metaTitle = head.metaTitle ? head.metaTitle : head.title
 
     const meta = [
@@ -56,7 +49,6 @@ class BaseLayout extends Component {
 
 BaseLayout.propTypes = {
   children: PropTypes.oneOfType([ PropTypes.array, PropTypes.object ]),
-  __filename: PropTypes.string,
   __url: PropTypes.string.isRequired,
   head: PropTypes.object.isRequired,
   body: PropTypes.string,

@@ -8,7 +8,7 @@ export default class MainMenu extends Component {
             <div id="oc-left-wrapper">
                 <span className="oc-overlay"></span>
                 <a className="oc-toggle left burger" id="hamburger">
-                    <i className="fa fa-2x fa-bars" aria-hidden="true" id="hamburger-icon"></i>
+                    <i className="icon-menu" aria-hidden="true" id="hamburger-icon"></i>
                 </a>
                 <div id="oc-left" className="oc-panel" data-side="left">
                     <h4>{ "Documentation" }</h4>

@@ -1,79 +1,66 @@
 ---
 title: Announcing freesewing, an open source platform for made-to-measure sewing patterns
+linktitle: "Announcing freesewing 1.0.0"
+blurb: "Freesewing core is hits release number 1.0.0"
 date: 2017-03-17
+author: "Joost De Cock"
+authorlink: "http://github.com/joostdecock/"
+image: "picture.jpg"
+caption: "A bird hitches a ride on a swimming pig"
+credit: "An image from pexels.com"
+creditlink: "https://www.pexels.com/photo/white-and-gray-bird-on-the-bag-of-brown-and-black-pig-swimming-on-the-beach-during-daytime-66258/"
+category: "releases"
+tags: tag1, tag2, tag3
 layout: Post
 ---
 ## What is freesewing?
 
 In a nutshell:
 
-```php
-<?php
-// This is a single-line comment
-
-# This is also a single-line comment
-
-/*
-This is a multiple-lines comment block
-that spans over multiple
-lines
-*/
-
-// You can also use comments to leave out parts of a code line
-$x = 5 /* + 15 */ + 5;
-echo $x;
-?>
-```
-
-<p class="display-4">Freesewing is an open source platform for made-to-measure sewing patterns</p>
+<p class="display-3"><em>Freesewing is an open source platform for made-to-measure sewing patterns</em></p>
 
 Or, read the origin story:
 
-> <h4 class="notoc">The freesewing origin story</h4>
-> Sewing is easy. It really is.
-> What's hard is getting things to fit properly.
-> That's why you use a sewing pattern.
-> It's a blueprint for whatever it is you are making.
-> A good pattern gives you good fit. Most patterns don't.
->
-> That's because &mdash; much like clothes in the shop &mdash; patterns come in sizes.
-> And sizes are a crude way to put people in boxes.
-> They are made for an imaginary average person, rather than for you.
->
-> There's another way, and that is to draft a pattern based on your measurements.
-> These made-to-measure patterns are vastly superior, but they require a lot of work.
->
-> I wanted to change that, and that effort evolved into
-> [MakeMyPattern.com](https://makemypattern.com/).
-> I ran that site for a number of years, and it was a remarkable success.
-> Probably helped by the fact that I gave away all patterns for free.
->
-> In the world of home sewing, it tends to require a bit of
-> explaining why one would choose to give away their work for free.
-> Things are different in the open source world where the idea of
-> sharing your work with others for the benefit of all is
-> the very thread from which communities are woven.
->
-> While I can't magically bring the culture of open source
-> to sewing patterns, I certainly can bring sewing patterns
-> into the open source world.
->
-> [Freesewing.org](https://freesewing.org/) will continue to offer what
-> [Makemypattern.com](https://makemypattern.com/) does today:
-> free sewing patterns drafted to your measurements.
-> But additionally, it will be open to your contributions.
->
-> Here's hoping that in the Venn diagram of the somewhat geeky and sewing,
-> it's not just me in the middle.
->
-> joost
-{: .comment}
+<blockquote class="comment" markdown=1>
+<h4>The freesewing origin story</h4>
+Sewing is easy. It really is.
+What's hard is getting things to fit properly.
+That's why you use a sewing pattern.
+It's a blueprint for whatever it is you are making.
+A good pattern gives you good fit. Most patterns don't.
 
-## Test image
+That's because &mdash; much like clothes in the shop &mdash; patterns come in sizes.
+And sizes are a crude way to put people in boxes.
+They are made for an imaginary average person, rather than for you.
 
-This is an image stored in the blog post folder:
+There's another way, and that is to draft a pattern based on your measurements.
+These made-to-measure patterns are vastly superior, but they require a lot of work.
 
-![An example image](picture.jpg "Example picture title")
+I wanted to change that, and that effort evolved into
+[MakeMyPattern.com](https://makemypattern.com/).
+I ran that site for a number of years, and it was a remarkable success.
+Probably helped by the fact that I gave away all patterns for free.
+
+In the world of home sewing, it tends to require a bit of
+explaining why one would choose to give away their work for free.
+Things are different in the open source world where the idea of
+sharing your work with others for the benefit of all is
+the very thread from which communities are woven.
+
+While I can't magically bring the culture of open source
+to sewing patterns, I certainly can bring sewing patterns
+into the open source world.
+
+[Freesewing.org](https://freesewing.org/) will continue to offer what
+[Makemypattern.com](https://makemypattern.com/) does today:
+free sewing patterns drafted to your measurements.
+But additionally, it will be open to your contributions.
+
+Here's hoping that in the Venn diagram of the somewhat geeky and sewing,
+it's not just me in the middle.
+
+joost
+</blockquote>
 
 What Freesewing does is comparable to what
 [Lekala](https://www.lekala.co/) does:
@@ -81,8 +68,7 @@ provide customized sewing patterns.
 
 But there is one important difference:
 
-Freesewing is free of charge. Our patterns are free ([CC-BY](/license)) and our code is free ([GPL-3](/license)).
-{: .display-4 }
+<p class="display-3" markdown=1><em>Freesewing is free of charge. Our patterns are free, and our code is free</em></p>
 
 
 This is not a business and is not about making money. Freesewing is a labour of love.

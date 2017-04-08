@@ -2,6 +2,7 @@ import path from "path"
 
 import webpack from "webpack"
 import ExtractTextPlugin from "extract-text-webpack-plugin"
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 import { phenomicLoader } from "phenomic"
 import PhenomicLoaderFeedWebpackPlugin
   from "phenomic/lib/loader-feed-webpack-plugin"
@@ -16,6 +17,7 @@ import phenomicLoaderPluginsInitRawBodyPropertyFromContent
   from "phenomic/lib/loader-plugin-init-rawBody-property-from-content"
 import freesewingMarkdownPipeline 
   from "./src/plugins/freesewing-markdown-pipeline/index.js"
+
 
 import pkg from "./package.json"
 
@@ -99,6 +101,22 @@ export default (config = {}) => {
     },
 
     plugins: [
+      new webpack.ProvidePlugin({
+        $: "jquery",
+        jQuery: "jquery"
+      }),
+
+      new CopyWebpackPlugin([
+        { 
+          from: 'blog/**/*', 
+          context: __dirname + '/content' 
+        },
+      ], 
+        {
+          ignore: [ '*.md', ],
+        }
+      ),
+
       new PhenomicLoaderFeedWebpackPlugin({
         // here you define generic metadata for your feed
         feedsOptions: {
