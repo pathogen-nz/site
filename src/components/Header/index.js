@@ -23,7 +23,6 @@ export default class Header extends Component {
                 <li><Link to="/about"  className="on-bg" activeClassName="active">{"About"}</Link></li>
                 <li><Link to="/donate" className="on-bg" activeClassName="active">{"Donate"}</Link></li>
                 <li><Link to="/gitter" className="on-bg" activeClassName="active">{"Talk to us"}</Link></li>
-                <li><Link to="/blog/announcing-freesewing/" className="on-bg" activeClassName="active">{"Test"}</Link></li>
               </ul>
             </div>
           </div>

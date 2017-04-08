@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import Link from "react-router/lib/Link"
 
 export default class Footer extends Component {
 
