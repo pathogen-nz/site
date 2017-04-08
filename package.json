@@ -132,6 +132,9 @@
   },
   "dependencies": {
     "dateformat": "^2.0.0",
-    "jquery": "^3.2.1"
+    "highlightjs": "^9.10.0",
+    "jquery": "^3.2.1",
+    "markdown-toc": "^1.1.0",
+    "remarkable": "^1.7.1"
   }
 }

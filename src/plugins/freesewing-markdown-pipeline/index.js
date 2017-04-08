@@ -6,65 +6,37 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _remark = require("remark");
+var Remarkable = require('remarkable');
+var toc = require('markdown-toc');
+var highlightjs = require('highlightjs');
 
-var _remark2 = _interopRequireDefault(_remark);
+var md = new Remarkable({
+  html:true,
+  linkify: true,
+  typographer: true,
+  quotes: '“”‘’',
+  highlight: function (str, lang) {
+    if (lang && highlightjs.getLanguage(lang)) {
+      try {
+        return highlightjs.highlight(lang, str).value;
+      } catch (err) {}
+    }
 
-var _remarkSlug = require("remark-slug");
+    try {
+      return highlightjs.highlightAuto(str).value;
+    } catch (err) {}
 
-var _remarkSlug2 = _interopRequireDefault(_remarkSlug);
-
-var _remarkAutolinkHeadings = require("remark-autolink-headings");
-
-var _remarkAutolinkHeadings2 = _interopRequireDefault(_remarkAutolinkHeadings);
-
-var _remarkHighlight = require("remark-highlight.js");
-
-var _remarkHighlight2 = _interopRequireDefault(_remarkHighlight);
-
-var _remarkToc = require("remark-toc");
-
-var _remarkToc2 = _interopRequireDefault(_remarkToc);
-
-var _remarkHtml = require("remark-html");
-
-var _remarkHtml2 = _interopRequireDefault(_remarkHtml);
-
-// These two are used for the seperate toc. See tocify()
-var _toc = require("mdast-util-toc");
-var stringify = require('remark-stringify');
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+    return ''; // use external default escaping
+  }
+}).use(function(remarkable) {
+  remarkable.renderer.rules.heading_open = function(tokens, idx) {
+    if(tokens[idx].hLevel > 3) return '<h' + tokens[idx].hLevel + '>';
+    return '<h' + tokens[idx].hLevel + ' id=' + toc.slugify(tokens[idx + 1].content) + '>';
+  };
+});
 
 function mdify(text) {
-  return (0, _remark2.default)()
-  // https://github.com/wooorm/remark-slug
-  .use(_remarkSlug2.default)
-
-  // https://github.com/ben-eb/remark-autolink-headings
-  .use(_remarkAutolinkHeadings2.default, {
-    content: {
-      type: "text",
-      value: "#"
-    },
-    linkProperties: {
-      className: "phenomic-HeadingAnchor"
-    }
-  })
-
-  // https://github.com/wooorm/remark-html
-  .use(_remarkHtml2.default, { entities: "escape" })
-
-  // https://github.com/ben-eb/remark-highlight.js
-  .use(_remarkHighlight2.default)
-
-  // https://github.com/wooorm/remark-toc
-  .use(_remarkToc2.default)
-
-  // render
-  .process(text, {
-    commonmark: true
-  }).toString();
+  return md.render(text)
 }
 
 /** Distils a seperate toc from the markdown text
@@ -74,9 +46,7 @@ function mdify(text) {
  *    perhaps you can make this a bit more elegant? 
  */
 function tocify(text) {
-    let node = _toc(_remark().parse(text)).map
-    if(node) return mdify(_remark().stringify(node).replace(/(^[ \t]*\n)/gm, ""))
-    else return false
+    return md.render(toc(text,{maxdepth: 3}).content)
 }
 
 exports.default = function (_ref) {
