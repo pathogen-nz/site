@@ -3,13 +3,13 @@ import { Link } from "phenomic"
 
 import Button from "../../components/Button"
 
-const PagePreview = ({ __url, title, date, description }) => {
+const PagePreview = ({ __url, linktitle, title, date, description }) => {
   const pageDate = date ? new Date(date) : null
 
   return (
     <div>
       <Link to={ __url }>
-        { title }
+        { linktitle || title }
       </Link>
       <div>
         {
@@ -33,6 +33,7 @@ const PagePreview = ({ __url, title, date, description }) => {
 PagePreview.propTypes = {
   __url: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  linktitle: PropTypes.string,
   date: PropTypes.string,
   description: PropTypes.string,
 }

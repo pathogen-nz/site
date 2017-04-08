@@ -1,6 +1,7 @@
 ---
-title: Freesewing repositories
-linkitle: Repositories
+title: Freeseing repositories
+linkitle: Repository overview
+blurb: An overview of all source code repositories available on GitHub
 tags: [developer documentation]
 layout: Page
 ---

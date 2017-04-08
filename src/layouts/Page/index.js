@@ -4,6 +4,7 @@ import MainMenu from "../../components/MainMenu"
 import TocMenu from "../../components/TocMenu"
 import Header from "../../components/Header"
 import BlogHeader from "../../components/BlogHeader"
+import PageHeader from "../../components/PageHeader"
 import BaseLayout from "../BaseLayout"
 import Footer from "../../components/Footer"
 import Head from "../../components/Head"
@@ -53,6 +54,7 @@ const Page = (props) => {
         <Head style={ props.head.style } />
         <MainMenu />
         <Header title={ props.head.title } style={ props.head.style } />
+        <PageHeader head={ props.head } />
         <div className="container">
           <div className="row">
             <div className="col-lg-8 col-md-12 fade-oc">

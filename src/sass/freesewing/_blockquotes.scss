@@ -1,37 +1,39 @@
 blockquote { 
     font-size: 0.95rem;
-    padding: 1.25rem;
-    border: 2px solid rgba(92,53,102,0.8);
-    margin: 1rem;
-    box-shadow: 0.3rem 0.3rem 0.5rem rgba(0,0,0,0.25);
+    padding: 1rem;
+    border: 1px solid rgba(92,53,102,0.8);
+    border-left: 1.5rem solid rgba(92,53,102,0.8);
+    margin: 0.5rem;
+    box-shadow: $shadow;
+    min-height: 40px;
 }
 blockquote p:last-child {
     margin-bottom: 0;
 }
 blockquote:before {
-    content: "\f0eb";
-    font-family: "FontAwesome" !important;
-    font-style: normal !important;
-    font-weight: normal !important;
-    font-variant: normal !important;
-    text-transform: none !important;
+    content: "tip";
+    text-transform: uppercase;
     speak: none;
+    font-size: 1rem;
+    font-weight: bold;
     line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-size: 3rem;
-    float: right;
-    margin-top: -0.3rem;
-    color: rgba(92,53,102,0.8);
+    float: left;
+    margin-left: -1.75rem;
+    margin-top: 1.5rem;
+    color: #fff;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    transform-origin: 0% 50%;
 }
 blockquote.quote { border-color: #666; }
 blockquote.quote:before {
-    content: "\f10e";
-    color: #666;
+    content: "quote";
 }
 blockquote.comment { border-color: #5bc0de; }
 blockquote.comment:before {
-    content: "\f0e5";
-    color: #5bc0de;
+    content: "comment";
 }
 article blockquote { margin-top: 2rem; }
