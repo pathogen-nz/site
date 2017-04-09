@@ -7,7 +7,6 @@ import Header from "../../components/Header"
 import BaseLayout from "../BaseLayout"
 import Footer from "../../components/Footer"
 import Head from "../../components/Head"
-import Icon from "../../components/Icon"
 
 const Homepage = (props) => {
   return (
@@ -15,13 +14,17 @@ const Homepage = (props) => {
         <Head style={ props.head.style } />
         <MainMenu />
         <Header title={ props.head.title } style={ props.head.style } />
-        <p>{"Here comes an icon"}</p>
-        <Icon name='heart' size="128" />
-        <Icon name='menu' size="128" />
-        <p>{"icon out"}</p>
-        <BaseLayout className="page" { ...props } />
-        <LatestPages />
-        <LatestPosts />
+        <div className="container">
+          <BaseLayout className="page" { ...props } />
+          <div className="row">
+            <div className="col-md-6">
+              <LatestPages />
+            </div>
+            <div className="col-md-6">
+              <LatestPosts />
+            </div>
+          </div>
+        </div>
         <Footer />
       </div>
   )
