@@ -6,3 +6,11 @@ pre code.hljs {
 code {
   color: $blue;
 }
+// Hide opening tag on php code blocks
+pre code.hljs {
+  padding: 0 1rem 1rem;
+  }
+code.hljs.lang-php span.hljs-meta {
+  display: none;
+  line-height: 0;
+}
