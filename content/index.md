@@ -6,9 +6,12 @@ layout: Homepage
 <div class="col-lg-7 col-md-12 offset-lg-2 fade-oc" markdown=1>
 Hi there. 
 
-This is a work in progress to create a freesewing website that combines the static content
-(documentation, blog posts, and so on) with its dynamic features (login, models, patterns)
-in line with our [frontend design ideas](blog/frontend-design-ideas/).
+This is a work in progress to create a freesewing website that combines:
+
+- static content: documentation, blog posts, and so on
+- dynamic content: login, models, patterns
+
+It's an attempt to implement our [frontend design ideas](blog/frontend-design-ideas/).
 
 ## What's working
 
