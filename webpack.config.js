@@ -108,7 +108,7 @@ export default (config = {}) => {
 
       new CopyWebpackPlugin([
         { 
-          from: 'blog/**/*', 
+          from: '**/*', 
           context: __dirname + '/content' 
         },
       ], 

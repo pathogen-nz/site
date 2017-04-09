@@ -14,6 +14,7 @@ var md = new Remarkable({
   html:true,
   linkify: true,
   typographer: true,
+  langPrefix: 'hljs lang-',
   quotes: '“”‘’',
   highlight: function (str, lang) {
     if (lang && highlightjs.getLanguage(lang)) {
@@ -33,6 +34,41 @@ var md = new Remarkable({
     if(tokens[idx].hLevel > 3) return '<h' + tokens[idx].hLevel + '>';
     return '<h' + tokens[idx].hLevel + ' id=' + toc.slugify(tokens[idx + 1].content) + '>';
   };
+  remarkable.renderer.rules.fence_custom.phpx = function (tokens, idx, options, env, instance) {
+      const id = tokens[idx].params.split(" ")[1] || false
+      if(id) {
+        return '<style>' +
+                 '#'+id+'tab1:checked ~ .css-tabs-content #'+id+'-content1,' +
+                 '#'+id+'tab2:checked ~ .css-tabs-content #'+id+'-content2 {' +
+                   'display: block;' +
+                 '}' +
+               '</style>' +
+               '<div class="css-tabs-wrapper">' +
+                 '<input class="nav-link css-tabs-tab" id="'+id+'tab1" type="radio" name="tabs" checked>' +
+                 '<label for="'+id+'tab1">Result</label>' +
+                 '<input class="css-tabs-tab" id="'+id+'tab2" type="radio" name="tabs">' +
+                 '<label for="'+id+'tab2">Code</label>' +
+                 '<div class="css-tabs-content">' +
+                   '<div id="'+id+'-content1" class="css-tabs-tab1">' +
+                     '<figure class="image">' +
+                       '<img class="img img-responsive drop-shadow" src="'+id+'.svg" alt="Example image for '+id+'">' +
+                     '</figure>' + 
+                   '</div>' +
+                   '<div id="'+id+'-content2" class="css-tabs-tab2">' +
+                     '<pre><code class="hljs lang-php php-inline php-example">' +
+                       highlightjs.highlight('php', tokens[idx].content).value +
+                     '</code></pre>' + 
+                   '</div>' +
+                 '</div>' +
+               '</div>' +
+             instance.getBreak(tokens, idx);
+      } else {
+        return '<pre><code class="hljs lang-php php-inline">' +
+               highlightjs.highlight('php', tokens[idx].content).value +
+             '</code></pre>' + 
+             instance.getBreak(tokens, idx);
+      }
+    };
 });
 
 function mdify(text) {
