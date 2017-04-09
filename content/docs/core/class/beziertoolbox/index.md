@@ -102,13 +102,8 @@ the curve we need to split. It is typically the result of an earlier call
 to [`BezierToolbox::bezierDelta`](#bezierdelta)
 
 #### Example
-<div class="tab-content">
-  class="beziertoolbox" 
-  id="beziercircle" 
-  caption="Make your Bezier curve mimic a smooth circle segment" 
-<div role="tabpanel" class="tabpane" id="beziercircle-tab2" markdown=1>
 
-```php
+```phpx beziercircle
 <?php
 $r = \Freesewing\BezierToolbox::bezierCircle(50);
 
@@ -122,8 +117,6 @@ $p->newPoint(6, 100,100);
 
 $p->newPath(1,"M 1 L 2 C 3 4 5 L 6");
 ```
-</div>
-</div>
 
 #### Typical use
 
@@ -158,15 +151,8 @@ Calculates the length of a cubic Bezier curve.
 
 
 #### Example
-{{< result-code-tabs bezierlength >}}
-<div class="tab-content">
-{{< core-class-result-tab
-  class="beziertoolbox" 
-  id="bezierlength" 
-  caption="Calculate the length of a Bezier curve" 
->}}
-<div role="tabpanel" class="tab-pane" id="bezierlength-tab2">
-```php
+
+```phpx bezierlength
 <?php
 /** @var \Freesewing\Part $p */
 $p->newPoint(1, 0, 100);
@@ -183,8 +169,6 @@ $p->newTextOnPath(
     ["dy" => -2,'class' => 'text-center']
 );
 ```
-</div>
-</div>
 
 #### Typical use
 
@@ -219,15 +203,8 @@ curve and keeping an eye on its outermost points.
 The side is either `left`, `right`, `up` or `down`.
 
 #### Example
-{{< result-code-tabs bezieredge >}}
-<div class="tab-content">
-{{< core-class-result-tab
-  class="beziertoolbox" 
-  id="bezieredge" 
-  caption="Find the edge of a Bezier curve" 
->}}
-<div role="tabpanel" class="tab-pane" id="bezieredge-tab2">
-```php
+
+```phpx bezieredge
 <?php
 /** @var \Freesewing\Part $p */
 $p->newPoint(1, 50, 50);
@@ -248,8 +225,6 @@ $p->newNote(2,"rightEdge", "Right edge", 3, 15, 0);
 $p->newNote(3,"topEdge", "Top edge", 12, 15, 0);
 $p->newNote(4,"bottomEdge", "Bottom edge", 6, 15, 0);
 ```
-</div>
-</div>
 
 #### Typical use
 
@@ -292,15 +267,8 @@ keeping an eye on the coordinates and registering the most topLeft and
 bottomRight point we encounter.
 
 #### Example
-{{< result-code-tabs bezierboundary >}}
-<div class="tab-content">
-{{< core-class-result-tab
-  class="beziertoolbox" 
-  id="bezierboundary" 
-  caption="Find the bounding box of a Bezier curve" 
->}}
-<div role="tabpanel" class="tab-pane" id="bezierboundary-tab2">
-```php
+
+```phpx bezierboundary
 <?php
 /** @var \Freesewing\Part $p */
 $p->newPoint(1, 50, 50);
@@ -320,8 +288,6 @@ $p->newPath(2,'M topLeft L topRight L bottomRight L bottomLeft z', ['class' => '
 $p->newTextOnPath(1,'M 1 C 2 3 4', 'Bezier curve', ['dy' => -2]);
 $p->newNote(1,'topRight', 'Boundary', 2, 15, 0);
 ```
-</div>
-</div>
 
 #### Typical use
 
@@ -355,15 +321,8 @@ For example, if `$split` is exactly halfway the curve, this will
 return 0.5.
 
 #### Example
-{{< result-code-tabs bezierdelta >}}
-<div class="tab-content">
-{{< core-class-result-tab
-  class="beziertoolbox" 
-  id="bezierdelta" 
-  caption="Delta of a point along a Bezier curve" 
->}}
-<div role="tabpanel" class="tab-pane" id="bezierdelta-tab2">
-```php
+
+```phpx bezierdelta
 <?php
 /** @var \Freesewing\Part $p */
 $p->newPoint(1, 0, 100);
@@ -383,8 +342,7 @@ $delta = \Freesewing\BezierToolbox::bezierDelta(
 );
 $p->newNote(1,5, "Delta of this point: $delta", 5, 25, 0, ['dy' => 2]);
 ```
-</div>
-</div>
+
 #### Typical use
 
 Used only in [`Part::splitCurve`](../part#splitcurve). 
@@ -421,15 +379,8 @@ the curve we need to split. It is typically the result of an earlier call
 to [`BezierToolbox::bezierDelta`](#bezierdelta)
 
 #### Example
-{{< result-code-tabs beziersplit >}}
-<div class="tab-content">
-{{< core-class-result-tab
-  class="beziertoolbox" 
-  id="beziersplit" 
-  caption="This method calculates new points that allow us to construct a curve that is a subsection of another curve" 
->}}
-<div role="tabpanel" class="tab-pane" id="beziersplit-tab2">
-```php
+
+```phpx beziersplit
 <?php
 /** @var \Freesewing\Part $p */
 $p->newPoint(1, 0, 100);
@@ -446,8 +397,6 @@ $p->addSplitCurve(1,2,3,4,5,'s');
 
 $p->newPath(2,"M s5 C s6 s7 s8", ['class' => 'debug']);
 ```
-</div>
-</div>
 
 #### Typical use
 
@@ -485,15 +434,8 @@ array|false bezierLineIntersections(
 Finds the intersection(s) between a line segment and a cubic Bezier Curve.
 
 #### Example
-{{< result-code-tabs bezierlineintersections >}}
-<div class="tab-content">
-{{< core-class-result-tab
-  class="beziertoolbox" 
-  id="bezierlineintersections" 
-  caption="This curve and line intersect in three points"
->}}
-<div role="tabpanel" class="tab-pane" id="bezierlineintersections-tab2">
-```php
+
+```phpx bezierlineintersections
 <?php
 /** @var \Freesewing\Part $p */
 $p->newPoint(1, 0, 100);
@@ -510,8 +452,6 @@ $p->newPath(1,"M 1 C 2 3 4 M 5 L 6");
 // to the part's points array
 $p->curveCrossesLine(1,2,3,4,5,6,'i');
 ```
-</div>
-</div>
 
 
 #### Typical use
@@ -550,15 +490,8 @@ array|false bezierBezierIntersections(
 Finds the intersection(s) between 2 cubic Bezier Curves.
 
 #### Example
-{{< result-code-tabs bezierbezierintersections >}}
-<div class="tab-content">
-{{< core-class-result-tab
-  class="beziertoolbox" 
-  id="bezierbezierintersections" 
-  caption="Two cubic Bezier curves can intersect in up to nine points"
->}}
-<div role="tabpanel" class="tab-pane" id="bezierbezierintersections-tab2">
-```php
+
+```phpx bezierbezierintersections
 <?php
 /** @var \Freesewing\Part $p */
 $p->newPoint(1, 0, 100);
@@ -577,8 +510,6 @@ $p->newPath(2,"M 5 C 6 7 8");
 // to the part's points array
 $p->curvesCross(1,2,3,4,5,6,7,8,'i');
 ```
-</div>
-</div>
 
 #### Typical use
 
@@ -593,5 +524,5 @@ Bezier curve, and the last four describe the second Bezier curve.
 
 #### Return value
 
-Returns either `false` when no intersections are found. Or an array of 
+Returns either `false` when no intersections are found. Or an `array` of 
 [`Point`](../point) objects with the intersection point(s).
