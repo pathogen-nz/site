@@ -1,4 +1,5 @@
 import React from "react"
+import Scroller from "../Scroller"
 
 const Footer = () => {
   return (
@@ -39,6 +40,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <Scroller />
     </footer>
   )
 }

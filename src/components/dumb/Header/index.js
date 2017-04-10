@@ -1,7 +1,8 @@
-import React, { PropTypes } from "react"
+import React from "react"
 import { Link } from "phenomic"
+import Icon from "../Icon"
 
-const Header = ({ style}) => {
+const Header = () => {
     
   return (
     <header className="header" id="header">
@@ -9,7 +10,7 @@ const Header = ({ style}) => {
         <div className="header-inner">
           <div id="top-logo">
             <Link className="on-bg" to="/" title="Home" >
-              <img src="/assets/img/logo/logo-white.svg" alt="The freesewing logo" className="img img-responsive" />
+              <Icon name={"freesewing"} size={128} />
             </Link>
           </div>
           <div className="masthead">
@@ -29,10 +30,6 @@ const Header = ({ style}) => {
       </div>
     </header>
   )
-}
-
-Header.propTypes = {
-  style : PropTypes.string.isRequired,
 }
 
 export default Header

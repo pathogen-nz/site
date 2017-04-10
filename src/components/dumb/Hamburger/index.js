@@ -5,10 +5,10 @@ import Icon from "../Icon"
 const Hamburger = () => {
 
   return (
-          <Link to={"#"} className="oc-toggle left burger" id="hamburger">
-              <Icon name={"menu"} />
-          </Link>
-      )
+    <Link to={"#"} className="oc-toggle left burger" id="hamburger">
+      <Icon name={"menu"} size={38}/>
+    </Link>
+  )
 }
 
 export default Hamburger

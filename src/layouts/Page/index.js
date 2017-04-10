@@ -8,7 +8,6 @@ import PageHeader from "../../components/dumb/PageHeader"
 import BaseLayout from "../BaseLayout"
 import Footer from "../../components/dumb/Footer"
 import Head from "../../components/dumb/Head"
-import Scroller from "../../components/dumb/Scroller"
 
 const Page = (props) => {
    if (props.style === "blog") {
@@ -16,7 +15,7 @@ const Page = (props) => {
         <div id={ "fs-container" } className={ props.head.style }>
           <Head style={ props.head.style } />
           <MainMenu />
-          <Header title={ props.head.title } style={ props.head.style } />
+          <Header />
           <BlogHeader head={ props.head } />
           <div className="post fade-oc container">
             <div className="row">
@@ -30,7 +29,6 @@ const Page = (props) => {
               </div>
             </div>
           </div>
-          <Scroller />
           <Footer />
         </div>
       )
@@ -40,11 +38,10 @@ const Page = (props) => {
         <div id={ "fs-container" } className={ props.head.style }>
           <Head style={ props.head.style } />
           <MainMenu />
-          <Header title={ props.head.title } style={ props.head.style } />
+          <Header />
           <div className="fade-oc">
             <BaseLayout className="home" { ...props } />
           </div>
-          <Scroller />
           <Footer />
         </div>
       )
@@ -53,7 +50,7 @@ const Page = (props) => {
       <div id={ "fs-container" } className={ props.head.style }>
         <Head style={ props.head.style } />
         <MainMenu />
-        <Header title={ props.head.title } style={ props.head.style } />
+        <Header />
         <PageHeader head={ props.head } />
         <div className="container">
           <div className="row">
@@ -69,7 +66,6 @@ const Page = (props) => {
             </div>
           </div>
         </div>
-        <Scroller />
         <Footer />
       </div>
     )

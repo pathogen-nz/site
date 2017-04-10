@@ -1,14 +1,16 @@
-import React, { Component } from "react"
+import React from "react"
+import { Link } from "phenomic"
+import Icon from "../Icon"
 
-export default class Scroller extends Component {
+const Scroller = () => {
 
-  render() {
     return (
       <div id="scroller" >
-        <a className="scroll-to-top" title="Back to top">
-          <i className="fa fa-arrow-up" aria-hidden="true"></i>
-        </a>
+        <Link to={"#top"} className="scroll-to-top" title="Back to top">
+          <Icon name={"up"} size={38}/>
+        </Link>
       </div>
     )
-  }
 }
+
+export default Scroller

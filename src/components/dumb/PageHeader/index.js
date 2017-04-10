@@ -6,14 +6,14 @@ export default class PageHeader extends Component {
       let meta = ''
       if(this.props.head.section === 'classdocs') {
         meta = <ul className="page-meta" id="top">
-                       <li>
-                         {"Class: "}
-                         <Link className="line" to={"FIXME"}>{ this.props.head.meta.namespace }</Link>
-                         {"\\"}
-                         { this.props.head.meta.classname }
-                       </li>
-                       <li>{"Repository: "}<Link className="line" to={ "fixme" }>{ this.props.head.meta.repository }</Link></li>
-                     </ul>
+          <li>
+            {"Class: "}
+            <Link className="line" to={"FIXME"}>{ this.props.head.meta.namespace }</Link>
+            {"\\"}
+            { this.props.head.meta.classname }
+          </li>
+          <li>{"Repository: "}<Link className="line" to={ "fixme" }>{ this.props.head.meta.repository }</Link></li>
+        </ul>
       } 
 
     return (

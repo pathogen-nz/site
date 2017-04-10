@@ -1,5 +1,5 @@
 import React, { PropTypes } from "react"
-import Link from "react-router/lib/Link"
+import { Link } from "phenomic"
 
 import MainMenu from "../../components/dumb/MainMenu"
 import Head from "../../components/dumb/Head"

@@ -1,13 +1,15 @@
 import React, { Component, PropTypes } from "react"
+import { Link } from "phenomic"
+import Icon from "../Icon"
 
 export default class TocMenu extends Component {
 
   render() {
     return (
             <div id="oc-right-wrapper">
-                <a className="oc-toggle right burger" id="tocburger">
-                    <i id="tocburger-icon" className="icon-toc" aria-hidden="true"></i>
-                </a>
+                <Link to={"#"} className="oc-toggle right burger" id="tocburger">
+                    <Icon name={"toc"} size={38} />
+                </Link>
                 <span className="oc-overlay"></span>
                 <section id="toc" className="sticky">
                     <div id="oc-right" className="oc-panel" data-side="right">

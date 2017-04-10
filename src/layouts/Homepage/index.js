@@ -12,7 +12,7 @@ const Homepage = (props) => {
       <div id={ "fs-container" } className={ props.head.style }>
         <Head style={ props.head.style } />
         <MainMenu />
-        <Header title={ props.head.title } style={ props.head.style } />
+        <Header />
         <div className="container">
           <BaseLayout className="page" { ...props } />
           <div className="row">
