@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import Link from "react-router/lib/Link"
+import { Link } from "phenomic"
 
 export default class MainMenu extends Component {
 
