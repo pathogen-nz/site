@@ -1,13 +1,14 @@
-import React, { Component } from "react"
+import React from "react"
+import { Link } from "phenomic"
+import Icon from "../Icon"
 
-export default class Hamburger extends Component {
+const Hamburger = () => {
 
-  render() {
-    return (
-            <a className="oc-toggle left burger" id="hamburger">
-                <i className="fa fa-bars fa-2x" aria-hidden="true"></i>
-            </a>
-        )
-  }
+  return (
+          <Link to={"#"} className="oc-toggle left burger" id="hamburger">
+              <Icon name={"menu"} />
+          </Link>
+      )
 }
 
+export default Hamburger
