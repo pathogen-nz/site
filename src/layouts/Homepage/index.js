@@ -1,7 +1,6 @@
 import React, { PropTypes } from "react"
 
-import LatestPosts from "../../components/LatestPosts"
-import LatestPages from "../../components/LatestPages"
+import LatestByLayout from "../../components/LatestByLayout"
 import MainMenu from "../../components/MainMenu"
 import Header from "../../components/Header"
 import BaseLayout from "../BaseLayout"
@@ -17,11 +16,13 @@ const Homepage = (props) => {
         <div className="container">
           <BaseLayout className="page" { ...props } />
           <div className="row">
-            <div className="col-md-6">
-              <LatestPages />
+            <div className="col-md-6 col-lg-4 col-xl-4 offset-lg-3 offset-xl-2">
+              <h2>On the blog</h2>
+              <LatestByLayout layout={"Post"} />
             </div>
-            <div className="col-md-6">
-              <LatestPosts />
+            <div className="col-md-6 col-lg-4 col-xl-4">
+              <h2>{"Latest pages"}</h2>
+              <LatestByLayout layout={"Page"} />
             </div>
           </div>
         </div>
