@@ -16,7 +16,7 @@ const ContentList = ({ pages }) => {
         }
         </div>
       )
-      : "No posts yet."
+      : "No content yet."
     }
     </div>
   )

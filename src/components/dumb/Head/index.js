@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from "react"
 import Helmet from "react-helmet"
-import site from "../../config.yml"
+import site from "../../../config.yml"
 
 export default class Head extends Component {
 

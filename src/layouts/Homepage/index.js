@@ -1,11 +1,11 @@
 import React, { PropTypes } from "react"
 
-import LatestByLayout from "../../components/LatestByLayout"
-import MainMenu from "../../components/MainMenu"
-import Header from "../../components/Header"
+import LatestByLayout from "../../components/dumb/LatestByLayout"
+import MainMenu from "../../components/dumb/MainMenu"
+import Header from "../../components/dumb/Header"
 import BaseLayout from "../BaseLayout"
-import Footer from "../../components/Footer"
-import Head from "../../components/Head"
+import Footer from "../../components/dumb/Footer"
+import Head from "../../components/dumb/Head"
 
 const Homepage = (props) => {
   return (

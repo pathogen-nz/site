@@ -1,10 +1,10 @@
 import React, { PropTypes } from "react"
 import Link from "react-router/lib/Link"
 
-import MainMenu from "../../components/MainMenu"
-import Head from "../../components/Head"
+import MainMenu from "../../components/dumb/MainMenu"
+import Head from "../../components/dumb/Head"
 import BaseLayout from "../BaseLayout"
-import CoverTitle from "../../components/CoverTitle"
+import CoverTitle from "../../components/dumb/CoverTitle"
 
 const CoverPage = (props) => {
      return (

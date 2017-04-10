@@ -1,7 +1,7 @@
 import React, { PropTypes } from "react"
 import enhanceCollection from "phenomic/lib/enhance-collection"
 
-import ContentList from "../../components/ContentList"
+import ContentList from "../ContentList"
 
 const defaultNumber = 10
 

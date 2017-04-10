@@ -11,3 +11,5 @@ Container.propTypes = {
 }
 
 export default Container
+
+/* Note that this component is not smart yet ;) */

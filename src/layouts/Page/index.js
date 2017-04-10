@@ -1,14 +1,14 @@
 import React, { PropTypes } from "react"
 
-import MainMenu from "../../components/MainMenu"
-import TocMenu from "../../components/TocMenu"
-import Header from "../../components/Header"
-import BlogHeader from "../../components/BlogHeader"
-import PageHeader from "../../components/PageHeader"
+import MainMenu from "../../components/dumb/MainMenu"
+import TocMenu from "../../components/dumb/TocMenu"
+import Header from "../../components/dumb/Header"
+import BlogHeader from "../../components/dumb/BlogHeader"
+import PageHeader from "../../components/dumb/PageHeader"
 import BaseLayout from "../BaseLayout"
-import Footer from "../../components/Footer"
-import Head from "../../components/Head"
-import Scroller from "../../components/Scroller"
+import Footer from "../../components/dumb/Footer"
+import Head from "../../components/dumb/Head"
+import Scroller from "../../components/dumb/Scroller"
 
 const Page = (props) => {
    if (props.style === "blog") {
