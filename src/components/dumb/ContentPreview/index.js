@@ -15,7 +15,6 @@ const ContentPreview = ({ __url, linktitle, title, description, blurb, layout, i
         <h3 className="card-title">
           <Link to={ __url }>
             { linktitle || title }
-            { layout }
           </Link>
         </h3>
         <p className="card-text">
