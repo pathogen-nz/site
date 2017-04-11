@@ -13,6 +13,25 @@ This is a work in progress to create a freesewing website that combines:
 
 It's an attempt to implement our [frontend design ideas](blog/frontend-design-ideas/).
 
+<div class="card drop-shadow">
+<div class="card-block">
+<h3 class="card-title">Current status</h3>
+
+If you open the console, you'll notice that clicking the
+menu icon (the hamburger) triggers the `TOGGLE_MENU` redux
+action, and that the `shown` state is toggled between
+`true` and `false`.
+
+So far so good, but this state is not passed to the `MainMenu`
+component, which means that it doesn't actually do anything yet.
+
+And so far, I haven't been able to figure out why.
+
+If you have an idea, [talk to us](https://gitter.im/freesewing/freesewing).
+</div>
+</div>
+
+
 ## What's working
 
 This site runs on [phenomic](http://phenomic.io) and is build on top of React.
