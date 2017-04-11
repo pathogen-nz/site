@@ -6,7 +6,8 @@ const MainMenu = ({shown, onClick}) => {
     
   let menuClass = ''
   if(shown) { menuClass = 'shown' }
-   console.log(shown) 
+  /* eslint-disable */
+  console.log(shown) 
   return (
     <div id="oc-left-wrapper">
       <span className="oc-overlay"></span>
@@ -32,6 +33,7 @@ const MainMenu = ({shown, onClick}) => {
       </div> 
     </div> 
   )
+  /* eslint-enable */
 }
 
 MainMenu.propTypes = {
