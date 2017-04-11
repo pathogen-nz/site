@@ -2,8 +2,6 @@ import React, { PropTypes } from "react"
 
 import Container from "./components/smart/Container"
 
-import "./js/fs.js"
-
 import "./sass/main.scss"
 
 const AppContainer = (props) => (

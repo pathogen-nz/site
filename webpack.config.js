@@ -101,11 +101,7 @@ export default (config = {}) => {
     },
 
     plugins: [
-      new webpack.ProvidePlugin({
-        $: "jquery",
-        jQuery: "jquery"
-      }),
-
+      
       new CopyWebpackPlugin([
         { 
           from: '**/*', 
