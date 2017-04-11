@@ -49,7 +49,7 @@ class BaseLayout extends Component {
 
 BaseLayout.propTypes = {
   children: PropTypes.oneOfType([ PropTypes.array, PropTypes.object ]),
-  __url: PropTypes.string.isRequired,
+  __url: PropTypes.string,
   head: PropTypes.object.isRequired,
   body: PropTypes.string,
   header: PropTypes.element,

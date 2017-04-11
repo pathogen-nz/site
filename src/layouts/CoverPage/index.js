@@ -1,7 +1,7 @@
 import React, { PropTypes } from "react"
 import { Link } from "phenomic"
 
-import MainMenu from "../../components/dumb/MainMenu"
+import MenuContainer from "../../components/smart/MenuContainer"
 import Head from "../../components/dumb/Head"
 import BaseLayout from "../BaseLayout"
 import CoverTitle from "../../components/dumb/CoverTitle"
@@ -10,7 +10,7 @@ const CoverPage = (props) => {
      return (
        <div id={ "fs-container" } className={"cover-wrap bg-thematic"}>
          <Head style={ "cover" } />
-         <MainMenu />
+         <MenuContainer />
          <div className={"cover-body"}>
             <CoverTitle title={ props.head.title } />
             <p className="lead mt-3">{ props.head.subtitle }</p>

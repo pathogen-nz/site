@@ -1,7 +1,7 @@
 import React, { PropTypes } from "react"
 
 import LatestByLayout from "../../components/dumb/LatestByLayout"
-import MainMenu from "../../components/dumb/MainMenu"
+import MenuContainer from "../../components/smart/MenuContainer"
 import Header from "../../components/dumb/Header"
 import BaseLayout from "../BaseLayout"
 import Footer from "../../components/dumb/Footer"
@@ -11,7 +11,7 @@ const Homepage = (props) => {
   return (
       <div id={ "fs-container" } className={ props.head.style }>
         <Head style={ props.head.style } />
-        <MainMenu />
+        <MenuContainer />
         <Header />
         <div className="container">
           <BaseLayout className="page" { ...props } />

@@ -1,6 +1,6 @@
 import React, { PropTypes } from "react"
 
-import MainMenu from "../../components/dumb/MainMenu"
+import MenuContainer from "../../components/smart/MenuContainer"
 import TocMenu from "../../components/dumb/TocMenu"
 import Header from "../../components/dumb/Header"
 import BlogHeader from "../../components/dumb/BlogHeader"
@@ -14,7 +14,7 @@ const Page = (props) => {
       return (
         <div id={ "fs-container" } className={ props.head.style }>
           <Head style={ props.head.style } />
-          <MainMenu />
+          <MenuContainer />
           <Header />
           <BlogHeader head={ props.head } />
           <div className="post fade-oc container">
@@ -37,7 +37,7 @@ const Page = (props) => {
       return (
         <div id={ "fs-container" } className={ props.head.style }>
           <Head style={ props.head.style } />
-          <MainMenu />
+          <MenuContainer />
           <Header />
           <div className="fade-oc">
             <BaseLayout className="home" { ...props } />
@@ -49,7 +49,7 @@ const Page = (props) => {
      return (
       <div id={ "fs-container" } className={ props.head.style }>
         <Head style={ props.head.style } />
-        <MainMenu />
+        <MenuContainer />
         <Header />
         <PageHeader head={ props.head } />
         <div className="container">

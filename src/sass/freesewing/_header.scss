@@ -74,18 +74,13 @@ div.masthead {
   top: 20px;
   position: absolute;
 }
-#top-logo img {
-  max-height: 80px;
-  max-width: 72px;
-  margin: auto;
-}
 
 @media (max-width: 991px) {
   ul.mini-menu li {
     margin-right: 0.5rem;
   }
   #top-logo {
-      right: 50px;
+      right: 20px;
       top: 25px;
   }
   ul.mini-menu {

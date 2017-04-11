@@ -1,16 +1,28 @@
-import React from "react"
+import React, { PropTypes } from "react"
 import { Link } from "phenomic"
 import Icon from "../Icon"
 
-const MainMenu = () => {
+const MainMenu = ({shown, onClick}) => {
     
+  let menuClass = ''
+  if(shown) { menuClass = 'shown' }
+   console.log(shown) 
   return (
     <div id="oc-left-wrapper">
       <span className="oc-overlay"></span>
-      <Link to={"#"} className="oc-toggle left burger" id="hamburger">
-        <Icon name={"menu"} size={38}/>
+      <Link 
+        to={"#"} 
+        className="oc-toggle left burger" 
+        id="hamburger" 
+        onClick={e => {
+          console.log('Menu icon clicked')
+          e.preventDefault()
+          onClick('main')
+        }}
+      > 
+        <Icon name={"menu"} size={38} />
       </Link>
-      <div id="oc-left" className="oc-panel" data-side="left">
+      <div id="oc-left" className={"oc-panel " + menuClass} data-side="left">
         <h4>{ "Documentation" }</h4>
         <ul>
           <li><Link to="/designer">{ "For designers" }</Link></li>
@@ -20,6 +32,11 @@ const MainMenu = () => {
       </div> 
     </div> 
   )
+}
+
+MainMenu.propTypes = {
+  shown: PropTypes.bool.isRequired,
+  onClick: PropTypes.func.isRequired
 }
 
 export default MainMenu

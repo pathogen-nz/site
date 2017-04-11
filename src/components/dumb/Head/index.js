@@ -9,7 +9,7 @@ export default class Head extends Component {
   };
 
   static propTypes = {
-    style: PropTypes.string.isRequired,
+    style: PropTypes.string,
   };
   
   render() {
