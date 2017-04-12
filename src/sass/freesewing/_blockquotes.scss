@@ -1,39 +1,43 @@
 blockquote { 
-    font-size: 0.95rem;
     padding: 1rem;
-    border: 1px solid rgba(92,53,102,0.8);
-    border-left: 1.5rem solid rgba(92,53,102,0.8);
+    border: 1px solid $teal;
+    border-left: 1rem solid $teal;
     margin: 0.5rem;
     box-shadow: $shadow;
-    min-height: 40px;
+    min-height: 4.5rem;
 }
 blockquote p:last-child {
     margin-bottom: 0;
 }
 blockquote:before {
-    content: "tip";
-    text-transform: uppercase;
+    content: "\1f4a1";
     speak: none;
-    font-size: 1rem;
+    font-size: 3rem;
     font-weight: bold;
     line-height: 1;
-    float: left;
-    margin-left: -1.75rem;
-    margin-top: 1.5rem;
-    color: #fff;
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-    transform-origin: 0% 50%;
+    float: right;
+    margin-right: -0.5rem;
+    margin-top: -0.5rem;
+    color: $teal;
 }
-blockquote.quote { border-color: #666; }
+blockquote.quote { border-color: $gray; }
 blockquote.quote:before {
-    content: "quote";
+    content: "\1f4ac";
+    color: $gray;
 }
-blockquote.comment { border-color: #5bc0de; }
+blockquote.comment { border-color: $purple; }
 blockquote.comment:before {
-    content: "comment";
+    content: "\1f4e2";
+    color: $purple;
+}
+blockquote.question { border-color: $green; }
+blockquote.question:before {
+    content: "?";
+    color: $green;
+}
+blockquote.warning { border-color: $red; }
+blockquote.warning:before {
+    content: "\26a0";
+    color: $red;
 }
 article blockquote { margin-top: 2rem; }
