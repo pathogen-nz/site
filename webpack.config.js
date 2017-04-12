@@ -115,14 +115,6 @@ export default (config = {}) => {
 
       new CopyWebpackPlugin([
         { 
-          from: '_redirects', 
-          to: '_redirects',
-        },
-      ], 
-      ),
-
-      new CopyWebpackPlugin([
-        { 
           from: 'admin', 
           to: 'admin',  
         },
