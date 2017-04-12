@@ -1,18 +1,24 @@
 import { connect } from 'react-redux'
-import { toggleMenu } from '../../../actions'
 import MainMenu from '../../dumb/MainMenu'
+import { bindActionCreators } from 'redux'
+import * as Actions from './redux'
 
+/*
+  menu state held in single 'menu' object
+  this can be passed as a single 'menu' prop, or individually (as below)
+*/
 const mapStateToProps = (state) => ({
-  shown: state.shown
+  shown: state.menu.shown
 })
 
+/*
+  bind all actions as single 'actions' object
+*/
 const mapDispatchToProps = (dispatch) => ({
-  onClick: (shown) => {
-    dispatch(toggleMenu(shown))
-  }
+  actions: bindActionCreators(Actions, dispatch),
 })
 
-const MenuContainer = connect (
+const MenuContainer = connect(
   mapStateToProps,
   mapDispatchToProps
 )(MainMenu)
