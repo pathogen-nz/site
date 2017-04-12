@@ -5,7 +5,7 @@ backend:
 
 publish_mode: editorial_workflow
 media_folder: content/assets/cms
-public_folder: /cms
+public_folder: /assets/cms
 collections:
     - name: blog
         label: Blog
