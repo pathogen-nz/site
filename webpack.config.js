@@ -113,6 +113,14 @@ export default (config = {}) => {
         }
       ),
 
+      new CopyWebpackPlugin([
+        { 
+          from: '_redirects', 
+          context: __dirname  
+        },
+      ], 
+      ),
+
       new PhenomicLoaderFeedWebpackPlugin({
         // here you define generic metadata for your feed
         feedsOptions: {
