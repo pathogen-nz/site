@@ -5,12 +5,13 @@ backend:
 
 publish_mode: editorial_workflow
 media_folder: content/assets/cms
-public_folder: /assets/cms
+public_folder: content
 collections:
-    - name: blog
-      label: Blog
+    - name: "post"
+      label: "Post"
       folder: content/blog
       create: true
+      card: {type: "alltype", text: "title"}
       slug: "{{slug}}"
       fields:
            - {label: "Layout", name: "layout", widget: "hidden", default: "Post"}
