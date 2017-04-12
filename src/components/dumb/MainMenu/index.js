@@ -9,10 +9,8 @@ const MainMenu = ({ actions, shown }) => {
   return (
     <div id="oc-left-wrapper" className={menuClass}>
       <span className="oc-overlay overlay-dark"></span>
-      /* I am using an <A> tag here because using a Link 
-       * component causes the browser to navigate to the homepage */
       <a
-        href={"#"}
+        href={"#hamburger"}
         className="oc-toggle left burger"
         id="hamburger"
         onClick={actions.toggleMenu}

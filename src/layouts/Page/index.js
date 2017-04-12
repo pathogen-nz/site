@@ -1,7 +1,7 @@
 import React, { PropTypes } from "react"
 
 import MenuContainer from "../../components/smart/MenuContainer"
-import TocMenu from "../../components/dumb/TocMenu"
+import TocContainer from "../../components/smart/TocContainer"
 import Header from "../../components/dumb/Header"
 import BlogHeader from "../../components/dumb/BlogHeader"
 import PageHeader from "../../components/dumb/PageHeader"
@@ -17,15 +17,15 @@ const Page = (props) => {
           <MenuContainer />
           <Header />
           <BlogHeader head={ props.head } />
-          <div className="post fade-oc container">
+          <div className="post container">
             <div className="row">
-              <div className="col-lg-7 col-md-12 offset-lg-1 fade-oc">
+              <div className="col-lg-7 col-md-12 offset-lg-1">
                 <article>
                   <BaseLayout className="post" { ...props } />
                 </article>
               </div>
               <div className="col-lg-4 col-md-12">
-                <TocMenu toc={ props.toc } />
+                <TocContainer toc={ props.toc } />
               </div>
             </div>
           </div>
@@ -39,9 +39,7 @@ const Page = (props) => {
           <Head style={ props.head.style } />
           <MenuContainer />
           <Header />
-          <div className="fade-oc">
-            <BaseLayout className="home" { ...props } />
-          </div>
+          <BaseLayout className="home" { ...props } />
           <Footer />
         </div>
       )
@@ -54,7 +52,7 @@ const Page = (props) => {
         <PageHeader head={ props.head } />
         <div className="container">
           <div className="row">
-            <div className="col-lg-8 col-md-12 fade-oc">
+            <div className="col-lg-8 col-md-12">
               <section id="content">
                 <article className="page">
                   <BaseLayout className="page" { ...props } />
@@ -62,7 +60,7 @@ const Page = (props) => {
               </section>
             </div>
             <div className="col-lg-4 col-md-12">
-              <TocMenu toc={ props.toc } />
+              <TocContainer toc={ props.toc } />
             </div>
           </div>
         </div>

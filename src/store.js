@@ -2,8 +2,8 @@ import { combineReducers } from "redux"
 import createStore from "phenomic/lib/redux/createStore"
 // eslint-disable-next-line import/no-namespace
 import * as phenomicReducers from "phenomic/lib/redux/modules"
-//import * as freesewingReducers from './reducers'
 import * as menu from './components/smart/MenuContainer/redux'
+import * as toc from './components/smart/TocContainer/redux'
 
 /*
   import and pass entire redux 'duck' into the store
@@ -14,8 +14,8 @@ import * as menu from './components/smart/MenuContainer/redux'
 const store = createStore(
   combineReducers({
     ...phenomicReducers,
-    //...freesewingReducers,
     ...menu,
+    ...toc,
   }),
   { ...(typeof window !== "undefined") && window.__INITIAL_STATE__ },
 )

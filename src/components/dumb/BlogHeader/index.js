@@ -4,8 +4,8 @@ import dateFormat from "dateformat"
 
 const BlogHeader = ({head}) => {
   return (
-    <div className="post fade-oc container">
-      <div className="row mt-5 fade-oc" id="posthead">
+    <div className="post container">
+      <div className="row mt-5" id="posthead">
         <div className="col-md-10 col-lg-10 offset-lg-1 offset-md-1 mt-5">
           <ul className="post-meta" id="top">
             <li><Link className="line" to={ head.authorlink }>{ head.author }</Link></li>
