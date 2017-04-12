@@ -9,6 +9,7 @@
 /* Action Types */
 
 const TOGGLE_TOC = 'freesewing-site/tocs/TOGGLE_TOC'
+const CLOSE_TOC = 'freesewing-site/tocs/CLOSE_TOC'
 
 /* Reducer */
 export const toc = (state = { shown: false }, action) => {
@@ -16,6 +17,10 @@ export const toc = (state = { shown: false }, action) => {
         case TOGGLE_TOC:
             return Object.assign({}, state, {
                 shown: !state.shown
+            })
+        case CLOSE_TOC:
+            return Object.assign({}, state, {
+                shown: false
             })
         default:
             return state
@@ -26,4 +31,8 @@ export const toc = (state = { shown: false }, action) => {
 
 export const toggleToc = () => ({
     type: TOGGLE_TOC,
+})
+
+export const closeToc = () => ({
+    type: CLOSE_TOC,
 })

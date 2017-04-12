@@ -9,6 +9,7 @@
 /* Action Types */
 
 const TOGGLE_MENU = 'freesewing-site/menus/TOGGLE_MENU'
+const CLOSE_MENU = 'freesewing-site/menus/CLOSE_MENU'
 
 /* Reducer */
 
@@ -17,6 +18,10 @@ export const menu = (state = { shown: false }, action) => {
         case TOGGLE_MENU:
             return Object.assign({}, state, {
                 shown: !state.shown
+            })
+        case CLOSE_MENU:
+            return Object.assign({}, state, {
+                shown: false
             })
         default:
             return state
@@ -27,4 +32,8 @@ export const menu = (state = { shown: false }, action) => {
 
 export const toggleMenu = () => ({
     type: TOGGLE_MENU,
+})
+
+export const closeMenu = () => ({
+    type: CLOSE_MENU,
 })

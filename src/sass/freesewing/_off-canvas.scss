@@ -1,5 +1,4 @@
 .oc-panel {
-  z-index: 888889;
   overflow: auto;
   overflow-y: auto;
   height: 100vh;
@@ -13,6 +12,7 @@
   color: $link-hover-color !important;
 }
 #oc-left {
+  z-index: 2002;
   top: 0px;
   width: 300px;
   height: 100%;
@@ -39,13 +39,13 @@
   width: 100%;
   height: 100%;
   display: none;
-  z-index: 888887;
+  z-index: 2000;
   top: 0;
 }
 .oc-overlay.right{
   width: 2000%;
   margin-left: -500px;
-  z-index: 0;
+  z-index: 1000;
 }
 #oc-left-wrapper.shown .oc-overlay,
 #oc-right-wrapper.shown .oc-overlay {
@@ -66,6 +66,7 @@
 @media (max-width: 991px) {
 
     #oc-right {
+      z-index: 1002;
       top: 0;
       width: 300px;
       height: 100%;

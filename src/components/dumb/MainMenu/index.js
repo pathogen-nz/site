@@ -5,14 +5,22 @@ import Icon from "../Icon"
 const MainMenu = ({ actions, shown }) => {
 
   let menuClass = (shown) ? 'shown' : ''
+  let iconTitle = (shown) ? 'Close the menu' : 'Open the menu'
 
   return (
     <div id="oc-left-wrapper" className={menuClass}>
-      <span className="oc-overlay overlay-dark"></span>
+      <a
+        href={"#hamburger"}
+        title={"Close the menu"}
+        onClick={actions.closeMenu}
+      >
+        <span className="oc-overlay overlay-dark"></span>
+      </a>
       <a
         href={"#hamburger"}
         className="oc-toggle left burger"
         id="hamburger"
+        title={iconTitle}
         onClick={actions.toggleMenu}
       >
         <Icon name={"menu"} size={38} />

@@ -14,7 +14,12 @@ const TocMenu = ({ actions, shown, toc }) => {
             >
                 <Icon name={"toc"} size={38} />
             </a>
-            <span className="oc-overlay right"></span>
+            <a
+                href={"#tocburger"}
+                onClick={actions.closeToc}
+            >
+              <span className="oc-overlay right"></span>
+            </a>
             <aside id="toc" className="sticky">
                 <div id="oc-right" className="oc-panel">
                     <h3 id="toc-title" name="toc" className="mt-5">{ "Contents" }</h3>

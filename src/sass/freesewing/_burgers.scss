@@ -12,8 +12,8 @@ a.burger.white {
     color: #fff;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
-#hamburger { left: 1rem; }
-#tocburger { right: 1rem; }
+#hamburger { left: 1rem; z-index: 2002;}
+#tocburger { right: 1rem; z-index: 1002;}
 @media (min-width: 992px) {
     #tocburger {
         display: none;
