@@ -8,21 +8,21 @@ media_folder: content/assets/cms
 public_folder: /assets/cms
 collections:
     - name: blog
-        label: Blog
-        folder: content/blog
-        create: true
-        slug: "{{slug}}"
-        fields:
-             - {label: "Layout", name: "layout", widget: "hidden", default: "Post"}
-             - {label: "Title", name: "title", widget: "string"}
-             - {label: "Link title", name: "linktitle", widget: "string"}
-             - {label: "Blurb", name: "blurb", widget: "string"}
-             - {label: "Author", name: "author", widget: "string"}
-             - {label: "Author link", name: "authorlink", widget: "string"}
-             - {label: "Image", name: "thumbnail", widget: "image"}
-             - {label: "Image caption", name: "caption", widget: "string"}
-             - {label: "Image credit", name: "credit", widget: "string"}
-             - {label: "Image credit link", name: "creditlink", widget: "string"}
-             - {label: "Category", name: "category", widget: "string"}
-             - {label: "Date", name: "date", widget: "datetime"}
-             - {label: "Body", name: "body", widget: "markdown"}
+    label: Blog
+    folder: content/blog
+    create: true
+    slug: "{{slug}}"
+    fields:
+         - {label: "Layout", name: "layout", widget: "hidden", default: "Post"}
+         - {label: "Title", name: "title", widget: "string"}
+         - {label: "Link title", name: "linktitle", widget: "string"}
+         - {label: "Blurb", name: "blurb", widget: "string"}
+         - {label: "Author", name: "author", widget: "string"}
+         - {label: "Author link", name: "authorlink", widget: "string"}
+         - {label: "Image", name: "thumbnail", widget: "image"}
+         - {label: "Image caption", name: "caption", widget: "string"}
+         - {label: "Image credit", name: "credit", widget: "string"}
+         - {label: "Image credit link", name: "creditlink", widget: "string"}
+         - {label: "Category", name: "category", widget: "string"}
+         - {label: "Date", name: "date", widget: "datetime"}
+         - {label: "Body", name: "body", widget: "markdown"}
