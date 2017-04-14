@@ -14,7 +14,7 @@ const MainMenu = ({ actions, shown }) => {
         title={"Close the menu"}
         onClick={actions.closeMenu}
       >
-        <span className="oc-overlay overlay-dark"></span>
+        <span className="oc-overlay left overlay-dark"></span>
       </a>
       <a
         href={"#hamburger"}

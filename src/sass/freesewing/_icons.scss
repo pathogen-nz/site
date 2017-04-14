@@ -1,8 +1,18 @@
 svg.menu,
+svg.toc {
+    stroke: $light-purple;
+    stroke-linecap: round;
+    fill: none;
+}
+svg.menu { stroke-width: 8; }
 svg.toc,
-svg.up {
-    fill: $light-purple;
+svg.right,
+svg.left,
+svg.up,
+svg.down{ 
+    stroke-width: 6; 
 }
-svg.freesewing {
-    fill: #fff;
-}
+svg.close { stroke-width: 3;}
+
+svg.freesewing { fill: #fff; }
+

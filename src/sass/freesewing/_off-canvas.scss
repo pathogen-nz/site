@@ -39,13 +39,14 @@
   width: 100%;
   height: 100%;
   display: none;
-  z-index: 2000;
   top: 0;
+}
+.oc-overlay.left{
+  z-index: 2000;
 }
 .oc-overlay.right{
   width: 2000%;
   margin-left: -500px;
-  z-index: 1000;
 }
 #oc-left-wrapper.shown .oc-overlay,
 #oc-right-wrapper.shown .oc-overlay {

@@ -3,7 +3,8 @@ a.burger {
     top: 1rem;
     color: $light-purple !important;
     font-size: 2rem;
-  z-index: 888890;
+    z-index: 888890;
+    outline: none;
 }
 a.burger:hover {
     color: $purple !important;
