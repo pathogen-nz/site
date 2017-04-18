@@ -1,16 +1,16 @@
 ---
 site_info:
-    title: "Freesewing - open source platform for made-to-measure sewing patterns"
+    title: "Freesewing - An open source platform for made-to-measure sewing patterns"
     subject: "freesewing"
     description: "Freesewing is an open source platform for made-to-measure sewing patterns"
-    keywords: "freesewing, documentation, sewing, patterns, opensource, free, sewing patterns"
+    keywords: "freesewing, documentation, sewing, patterns, open source, free, sewing patterns"
     copyright: "Joost De Cock"
     author: "Joost De Cock"
     language: "EN"
 
 github:
-    repo: "https://github.com/joostdecock/site"
-    edit_branch: "master"
+    repo: "https://github.com/freesewing/site"
+    edit_branch: "develop"
 
 social:
     github: "freesewing"
@@ -30,3 +30,6 @@ theme_settings:
     apple_icon_180: "/assets/img/icons/apple-icon-180x180.png"
     android_icon: "/assets/img/icons/android-icon-192x192.png"
 
+auth0:
+    client_id: "ti7huYbvsYnxJxgkrEgRqluAPmpwZbu1"
+    domain: "freesewing.eu.auth0.com"

@@ -7,6 +7,22 @@ import BaseLayout from "../BaseLayout"
 import CoverTitle from "../../components/dumb/CoverTitle"
 
 const CoverApp = (props) => {
+   if (props.head.action === "login") {
+     return (
+       <div id={ "fs-container" } className={"cover-wrap bg-thematic"}>
+         <Head style={ "cover" } />
+         <MenuContainer />
+         <div className={"cover-body"}>
+            <p className="lead mt-3">{"Handle login here"}</p>
+        </div>
+        <div className="cover-bottom">
+            <div id="copyright">
+                <p id="raquo"><Link to="/" className="to-post noline">{"Home"}</Link></p>
+            </div>
+        </div>
+    </div>
+    )
+   } else {
      return (
        <div id={ "fs-container" } className={"cover-wrap bg-thematic"}>
          <Head style={ "cover" } />
@@ -23,6 +39,7 @@ const CoverApp = (props) => {
         </div>
     </div>
     )
+    }
 }
 
 CoverApp.propTypes = {

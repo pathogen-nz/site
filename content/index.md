@@ -5,8 +5,6 @@ layout: Homepage
 <div class="container" markdown=1>
 <div class="col-lg-7 col-md-12 offset-lg-2 fade-oc" markdown=1>
 
-Test: Go to [the profile page](/profile)
-
 Hi there. 
 
 This is a work in progress to create a freesewing website that combines:
@@ -29,7 +27,7 @@ yet, just the check and redirect to /login.
 
 Note that the link to /profile is also in the main menu.
 
-<h5>If you're a React wiz, here's a challenge for you</h5>
+<h4>If you're a React wiz, here's a challenge for you</h4>
 
 When you open the TOC (on a page like [this](/about) and
 on mobile or a narrow browser window so it's off-canvas) it 

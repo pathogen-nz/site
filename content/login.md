@@ -1,8 +1,8 @@
 ---
 title: Login
 subtitle: This does not actually do anything
-layout: CoverPage
+layout: CoverApp
 action: login
 ---
 
-This page uses the __CoverPage__ layout
+Content goes here
