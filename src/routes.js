@@ -14,10 +14,14 @@ import CoverApp from "./layouts/CoverApp"
 
 
 // validate authentication for private routes
-const requireAuth = (nextState, replace) => {
-  if (!isAuthenticated()) {
-    replace({ pathname: '/login' })
-  }
+/* eslint-disable */
+let requireAuth = null
+if (typeof window !== 'undefined') {
+    requireAuth = (nextState, replace) => {
+        if (!isAuthenticated()) {
+            replace({ pathname: '/login' })
+        }
+    }
 }
 
 const PageContainer = (props) => (
