@@ -27,6 +27,9 @@ const MainMenu = ({ actions, shown }) => {
       </a>
       <div id="oc-left" className={"oc-panel bg-thematic"}>
         <div className={"overlay-light"}>
+          <ul>
+            <li><Link to="/profile">{"Profile"}</Link></li>
+          </ul>
           <h4>{"Documentation"}</h4>
           <ul>
             <li><Link to="/designer">{"For designers"}</Link></li>

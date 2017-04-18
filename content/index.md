@@ -4,6 +4,9 @@ layout: Homepage
 ---
 <div class="container" markdown=1>
 <div class="col-lg-7 col-md-12 offset-lg-2 fade-oc" markdown=1>
+
+Test: Go to [the profile page](/profile)
+
 Hi there. 
 
 This is a work in progress to create a freesewing website that combines:
@@ -17,14 +20,14 @@ It's an attempt to implement our [frontend design ideas](blog/frontend-design-id
 <div class="card-block">
 <h3 class="card-title">Current status</h3>
 
-I started looking at integrating Netlify CMS, but I haven't 
-had the time to get it running.
+Working to integrate authentication. 
+If you go to [the profile page](/profile) you should be redirected 
+to the login page, because it checks whether you are logged in first.
 
-You can have a look at [/assets/admin](/assets/admin) and
-see if you can get it up and running.
+And you're not logged in, because there's no login functionality
+yet, just the check and redirect to /login.
 
-For one thing, the config is wrong, because I forgot to add
-the assets part to the path.
+Note that the link to /profile is also in the main menu.
 
 <h5>If you're a React wiz, here's a challenge for you</h5>
 

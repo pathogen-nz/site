@@ -9,6 +9,8 @@ import BaseLayout from "../BaseLayout"
 import Footer from "../../components/dumb/Footer"
 import Head from "../../components/dumb/Head"
 
+import Login from "../../components/Login"
+
 const Page = (props) => {
    if (props.style === "blog") {
       return (
@@ -20,6 +22,7 @@ const Page = (props) => {
           <div className="post container">
             <div className="row">
               <div className="col-lg-7 col-md-12 offset-lg-1">
+                <Login auth={props.route.auth} />
                 <article>
                   <BaseLayout className="post" { ...props } />
                 </article>
@@ -76,6 +79,7 @@ Page.propTypes = {
     PropTypes.string,
     PropTypes.bool,
   ]),
+  route: PropTypes.object,
 }
 
 export default Page
